@@ -24,6 +24,7 @@ if __name__ == "__main__":
 			else:
 			    words.append(w)
 		translation.append(" ".join(words))
+		print(" ".join(words))
 
 	with open(args.o + "/output.txt", "w", encoding='utf8') as f:
 		f.write("\n".join(translation))
