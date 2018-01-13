@@ -30,5 +30,5 @@ if __name__ == "__main__":
 			    #words.append("tykva")
 		translation.append(" ".join(words))
 
-	with open(args.o + "output.txt", "w") as f:
+	with open(args.o + "/output.txt", "w") as f:
 		f.write("\n".join(translation))
