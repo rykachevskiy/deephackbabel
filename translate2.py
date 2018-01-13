@@ -10,7 +10,7 @@ if __name__ == "__main__":
 
 	print(args.i)
 
-	dict_f = open("./english_german.json")
+	dict_f = open("./english_german.json", encoding='utf8')
 	dict_ = json.load(dict_f)
 	dict_f.close()
 
