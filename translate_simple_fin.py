@@ -8,8 +8,6 @@ if __name__ == "__main__":
 	parser.add_argument('-o')
 	args = parser.parse_args()
 
-	print(args.i)
-
 	dict_f = open("./english_german.json", encoding='utf8')
 	dict_ = json.load(dict_f)
 	dict_f.close()
