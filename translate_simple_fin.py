@@ -24,7 +24,7 @@ if __name__ == "__main__":
 			if w in dict_:
 			    words.append(dict_[w])
 			else:
-			    words.append("tykva")
+			    words.append(w)
 		translation.append(" ".join(words))
 
 	with open(args.o + "/output.txt", "w", encoding='utf8') as f:
