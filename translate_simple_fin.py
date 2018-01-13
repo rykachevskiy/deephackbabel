@@ -15,7 +15,7 @@ if __name__ == "__main__":
 	dict_f.close()
 
 	with open(args.i + "/input.txt") as f:
-		lines = f.readlines()
+		lines = [x[:-1] for x in f.readlines()]
 
 	translation = []
 	for l in lines:
