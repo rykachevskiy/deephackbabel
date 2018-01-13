@@ -21,13 +21,10 @@ if __name__ == "__main__":
 	for l in lines:
 		words = []
 		for w in l.split(" "):
-			words.append(w)
 			if w in dict_:
-			    pass
-			    #words.append(dict_[w])
+			    words.append(dict_[w])
 			else:
-			    pass
-			    #words.append("tykva")
+			    words.append("tykva")
 		translation.append(" ".join(words))
 
 	with open(args.o + "/output.txt", "w") as f:
