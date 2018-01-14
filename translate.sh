@@ -1,3 +1,3 @@
 #!/bin/sh
 
-python3 ./translate.py -i /data -o /output 
+cat /data/input.txt | python3 translate.py  > /output/output.txt
