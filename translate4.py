@@ -7,9 +7,7 @@ if __name__ == "__main__":
 	parser.add_argument('-i')
 	parser.add_argument('-o')
 	args = parser.parse_args()
-	
 	print(args.o + "/output.txt"
-
 	dict_f = open("./english_german.json", encoding='utf8')
 	dict_ = json.load(dict_f)
 	dict_f.close()
@@ -20,7 +18,7 @@ if __name__ == "__main__":
 	translation = []
 	for l in lines:
 		words = []
-	        print(l)
+		print(l)
 		for w in l.split(" "):
 			if w in dict_:
 			    words.append(dict_[w])
