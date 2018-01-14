@@ -25,5 +25,5 @@ if __name__ == "__main__":
 			    words.append(w)
 		translation.append(" ".join(words))
 
-	with open("/output/output.txt", "rw", encoding='utf8') as f:
+	with open("/output/output.txt", "w", encoding='utf8') as f:
 		f.write("\n".join(translation))
