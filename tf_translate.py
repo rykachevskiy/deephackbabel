@@ -50,7 +50,7 @@ decoder_out = decoder_out_layer(decoder_recurent_1)
 
 total_model = Model([encoder_input, decoder_input], decoder_out)
 
-total_model.load_weights("../../model_2.h5")
+total_model.load_weights("/en-de/model.h5")
 
 
 #PREDICT
@@ -60,8 +60,8 @@ def predict(model, max_len, x):
         y.append(np.argmax(total_model.predict([x, np.array([y])])[:,-1, :][0]))
     return y
 
-en_w_n = json.load(open("./en-de/en_w_n_2.json"))
-de_n_w = json.load(open("./en-de/de_n_w_2.json"))
+en_w_n = json.load(open("/en-de/en_w_n.json"))
+de_n_w = json.load(open("/en-de/de_n_w.json"))
 
 for l in sys.stdin:
 	words = l.split(" ")
@@ -76,7 +76,7 @@ for l in sys.stdin:
 
 
 	y = predict(total_model, 30, x)
-	print(y)
+	#print(y)
 	y_w = []
 	for w in y[1:]:
 		if str(w) in de_n_w:
