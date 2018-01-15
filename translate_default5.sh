@@ -34,7 +34,7 @@ $subword_nmt/apply_bpe.py -c $SRC$TRG.bpe | \
 # translate
 THEANO_FLAGS=mode=FAST_RUN,floatX=float16,device=$device,on_unused_input=warn,base_compiledir=. python $nematus/nematus/translate.py \
      -m model.npz \
-     -k 1 -n -p 2 --suppress-unk | \
+     -k 1 -n -p 1 --suppress-unk | \
 # postprocess
 sed 's/\@\@ //g' | \
 $mosesdecoder/scripts/recaser/detruecase.perl | \
