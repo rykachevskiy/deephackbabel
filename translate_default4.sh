@@ -32,9 +32,9 @@ $mosesdecoder/scripts/tokenizer/tokenizer.perl -l $SRC -penn | \
 $mosesdecoder/scripts/recaser/truecase.perl -model truecase-model.$SRC | \
 $subword_nmt/apply_bpe.py -c $SRC$TRG.bpe | \
 # translate
-THEANO_FLAGS=mode=FAST_RUN,floatX=float32,device=$device,on_unused_input=warn,base_compiledir=. python $nematus/nematus/translate.py \
+THEANO_FLAGS=mode=FAST_RUN,floatX=float16,device=$device,on_unused_input=warn,base_compiledir=. python $nematus/nematus/translate.py \
      -m model.npz \
-     -k 1 -n -p 4 --suppress-unk | \
+     -k 1 -n -p 2 --suppress-unk | \
 # postprocess
 sed 's/\@\@ //g' | \
 $mosesdecoder/scripts/recaser/detruecase.perl | \
