@@ -19,5 +19,9 @@ if __name__ == "__main__":
 			    words.append(w)
 		translation.append(" ".join(words))
 
-	for l in translation:
-		print(l.encode('utf-8'))
+	#for l in translation:
+	#	print(l.encode('utf-8'))
+	
+	with open("/output/output.txt", 'w') as f:
+		for l in translation:
+			f.write(l)
