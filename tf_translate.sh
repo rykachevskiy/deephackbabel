@@ -16,5 +16,5 @@ cat /data/input.txt | \
 $mosesdecoder/scripts/tokenizer/normalize-punctuation.perl -l en | \
 $mosesdecoder/scripts/tokenizer/tokenizer.perl -l en -penn | \
 $mosesdecoder/scripts/recaser/truecase.perl -model truecase-model.en | \
-python ./tf_translate.py |
+python ./translate.py |
 $mosesdecoder/scripts/recaser/detruecase.perl > /output/output.txt
