@@ -9,12 +9,12 @@
 
 # suffix of source languag
 # path to moses decoder: https://github.com/moses-smt/mosesdecoder
-mosesdecoder=/home/anton/deephack/extra_staff/mosesdecoder
+mosesdecoder=/en-de/mosesdecoder
 # path to subword segmentation scripts: https://github.com/rsennrich/subword-nmt
 
-cat /home/anton/deephack/data/input.txt | \
+cat /data/input.txt | \
 $mosesdecoder/scripts/tokenizer/normalize-punctuation.perl -l en | \
 $mosesdecoder/scripts/tokenizer/tokenizer.perl -l en -penn | \
 $mosesdecoder/scripts/recaser/truecase.perl -model truecase-model.en | \
-python ./tf_translate.py |
-$mosesdecoder/scripts/recaser/detruecase.perl > ./output.txt
+python3 ./translate.py |
+$mosesdecoder/scripts/recaser/detruecase.perl > /output/output.txt
