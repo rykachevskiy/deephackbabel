@@ -64,6 +64,7 @@ en_w_n = json.load(open("/en-de/en_w_n.json"))
 de_n_w = json.load(open("/en-de/de_n_w.json"))
 
 for l in sys.stdin:
+	l = l.lower()
 	words = l.split(" ")
 	words_l = [3502]
 	for w in words:
