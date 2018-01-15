@@ -17,11 +17,12 @@ if __name__ == "__main__":
 			    words.append(dict_[w])
 			else:
 			    words.append(w)
+			words.append(u"\n")
 		translation.append(" ".join(words))
 
 	#for l in translation:
 	#	print(l.encode('utf-8'))
 	
-	with open("/output/output.txt", 'w') as f:
-		for l in translation:
-			f.write(l)
+	with open("/output/output.txt", 'wb') as f:
+                for l in translation:
+                        f.write(l.encode('utf-8'))
