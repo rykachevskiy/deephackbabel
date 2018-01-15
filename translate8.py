@@ -20,4 +20,4 @@ if __name__ == "__main__":
 		translation.append(" ".join(words))
 
 	for l in translation:
-		print(l)
+		print(l.encode('utf-8'))
