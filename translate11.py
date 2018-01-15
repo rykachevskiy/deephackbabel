@@ -17,7 +17,7 @@ if __name__ == "__main__":
 			    words.append(dict_[w])
 			else:
 			    words.append(w)
-			words.append(u"\n")
+		words.append(u"\n")
 		translation.append(" ".join(words))
 
 	#for l in translation:
