@@ -55,7 +55,7 @@ total_model.load_weights("/en-de/model.h5")
 
 #PREDICT
 def predict(model, max_len, x):
-    y = [1002]
+    y = [3502]
     while y[-1] != 0 and len(y) < max_len:
         y.append(np.argmax(total_model.predict([x, np.array([y])])[:,-1, :][0]))
     return y
